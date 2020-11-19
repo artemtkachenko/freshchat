@@ -40,17 +40,17 @@ NSString *const METHOD_SEND_MESSAGE = @"send";
     config.domain = [[arguments objectForKey:@"domain"] stringValue];
 
     [[Freshchat sharedInstance] initWithConfig:config];
-    result(@"success");
+    result(@(TRUE));
 
   } else if ([callMethod isEqualToString:METHOD_IDENTIFY_USER]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else if ([callMethod isEqualToString:METHOD_UPDATE_USER_INFO]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else if ([callMethod isEqualToString:METHOD_RESET_USER]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else if ([callMethod isEqualToString:METHOD_SHOW_CONVERSATIONS]) {
     [[Freshchat sharedInstance] showConversations:[self rootViewController]];
-    result(@"success");
+    result(@(TRUE));
   } else if ([callMethod isEqualToString:METHOD_SHOW_FAQS]) {
     FAQOptions *options = [[FAQOptions alloc] init];
     options.showFaqCategoriesAsGrid = [[arguments objectForKey:@"showFaqCategoriesAsGrid"] boolValue];
@@ -58,15 +58,15 @@ NSString *const METHOD_SEND_MESSAGE = @"send";
     options.showContactUsOnFaqScreens = [[arguments objectForKey:@"showContactUsOnFaqScreens"] boolValue];
 
     [[Freshchat sharedInstance] showFAQs:[self rootViewController] withOptions:options];
-    result(@"success");
+    result(@(TRUE));
   } else if ([callMethod isEqualToString:METHOD_GET_UNREAD_MESSAGE_COUNT]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else if ([callMethod isEqualToString:METHOD_SETUP_PUSH_NOTIFICATIONS]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else if ([callMethod isEqualToString:METHOD_SEND_MESSAGE]) {
-    result(@"not implemented");
+    result(@(FALSE));
   } else {
-    result(@"not implemented");
+    result(@(FALSE));
   }
 }
 
