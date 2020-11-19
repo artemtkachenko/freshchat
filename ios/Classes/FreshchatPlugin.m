@@ -40,17 +40,17 @@ NSString *const METHOD_SEND_MESSAGE = @"send";
     config.domain = [[arguments objectForKey:@"domain"] stringValue];
 
     [[Freshchat sharedInstance] initWithConfig:config];
-    result(@(TRUE));
+    result(@(YES));
 
   } else if ([callMethod isEqualToString:METHOD_IDENTIFY_USER]) {
-    result(@(FALSE));
+    result(@(NO));
   } else if ([callMethod isEqualToString:METHOD_UPDATE_USER_INFO]) {
-    result(@(FALSE));
+    result(@(NO));
   } else if ([callMethod isEqualToString:METHOD_RESET_USER]) {
-    result(@(FALSE));
+    result(@(NO));
   } else if ([callMethod isEqualToString:METHOD_SHOW_CONVERSATIONS]) {
     [[Freshchat sharedInstance] showConversations:[self rootViewController]];
-    result(@(TRUE));
+    result(@(YES));
   } else if ([callMethod isEqualToString:METHOD_SHOW_FAQS]) {
     FAQOptions *options = [[FAQOptions alloc] init];
     options.showFaqCategoriesAsGrid = [[arguments objectForKey:@"showFaqCategoriesAsGrid"] boolValue];
@@ -58,15 +58,15 @@ NSString *const METHOD_SEND_MESSAGE = @"send";
     options.showContactUsOnFaqScreens = [[arguments objectForKey:@"showContactUsOnFaqScreens"] boolValue];
 
     [[Freshchat sharedInstance] showFAQs:[self rootViewController] withOptions:options];
-    result(@(TRUE));
+    result(@(YES));
   } else if ([callMethod isEqualToString:METHOD_GET_UNREAD_MESSAGE_COUNT]) {
-    result(@(FALSE));
+    result(@(NO));
   } else if ([callMethod isEqualToString:METHOD_SETUP_PUSH_NOTIFICATIONS]) {
-    result(@(FALSE));
+    result(@(NO));
   } else if ([callMethod isEqualToString:METHOD_SEND_MESSAGE]) {
-    result(@(FALSE));
+    result(@(NO));
   } else {
-    result(@(FALSE));
+    result(@(NO));
   }
 }
 
