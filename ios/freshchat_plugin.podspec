@@ -21,7 +21,7 @@ Freshchat plugin
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-  s.dependency 'FreshchatSDK', '4.0.1'
+  s.dependency 'FreshchatSDK', '4.1.8'
   s.frameworks = "Foundation", "AVFoundation", "AudioToolbox", "CoreMedia", "CoreData", "ImageIO", "Photos", "SystemConfiguration", "Security", "WebKit"
 
   s.static_framework = true

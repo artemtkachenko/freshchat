@@ -2,8 +2,8 @@ PODS:
   - Flutter (1.0.0)
   - freshchat_plugin (0.0.1):
     - Flutter
-    - FreshchatSDK (= 4.0.1)
-  - FreshchatSDK (4.0.1)
+    - FreshchatSDK (= 4.1.8)
+  - FreshchatSDK (4.1.8)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  freshchat_plugin: 0d8f2bd7c7dd12c9c73dfdad3b9d0b3cdbb0897b
-  FreshchatSDK: bb28b28abb4e5e19267fe604797ef37a88166472
+  freshchat_plugin: acb98571d13025ed13771e21cdd7d6e622aa60a1
+  FreshchatSDK: 0edbcc0a62a379a85e40ae82901bfabe992fa62a
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
